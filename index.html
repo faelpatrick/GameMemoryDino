@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>Jogo da Memória</title>
+</head>
+
+<body>
+
+    <div id='bg-sound-control'>
+        <audio src="sons/wild-hunter.mp3" loop id='bg-sound'></audio>
+        <span class="material-icons" id="sound-mute" onclick="soundBG()">
+            volume_up
+        </span>
+    </div>
+
+    <div id="gameBoard">
+
+    </div>
+
+    <div id="gameOver">
+        <div>
+            Parabéns, você completou o Jogo!
+        </div>
+        <button id="restart" onclick="restart()">Jogue novamente</button>
+    </div>
+
+    <script src="scripts/game.js"></script>
+    <script src="scripts/script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('touchmove', function (event) {
+            if (event.scale !== 1) { event.preventDefault(); }
+        }, { passive: false });
+    </script>
+
+</body>
+
+</html>

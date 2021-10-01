@@ -1,0 +1,171 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+body {
+	font-family: 'Righteous', sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 100vh;
+	background-color: #c7cdd3;
+	background-image: -o-linear-gradient(274deg, #03d400, #153e15);
+	background-image: linear-gradient(176deg, #03d400, #153e15);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.card {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .5s;
+	transition: -webkit-transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+	transition: transform .5s, -webkit-transform .5s;
+}
+.card_back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-radius: 20px;
+	-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+	        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	color: #101c2c;
+	background-color: #0da100;
+	font-size: 60px;
+	text-align: center;
+}
+.card_front {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-radius: 20px;
+	-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+	        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+	background-color: #ffffff;
+}
+.flip {
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
+}
+#gameOver {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	font-size: 50px;
+	display: none;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	top: 0;
+}
+#restart {
+	padding: 20px;
+	font-size: 20px;
+	background-color: yellow;
+	border: none;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+#gameBoard {
+	max-width: 90%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr;
+	-ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+	    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr;
+	gap: 20px;
+}
+img.icon {
+	max-width: 80%;
+}
+#bg-sound-control {
+	position: absolute;
+	top: 10px;
+}
+#bt-sound-mute {
+	background: rgba(0, 0, 0, 0);
+	border: none;
+	color: white;
+}
+#sound-mute {
+	background: rgba(0, 0, 0, 0);
+	border: none;
+	color: white;
+}
+@media only screen and (max-width: 1000px) {
+	body {
+		width: 100vw;
+		height: 100vh;
+		background-position: center;
+		background-repeat: repeat-y;
+		background-size: cover;
+	}
+	.card {
+		width: 22vw;
+		height: 22vw;
+	}
+	#gameBoard {
+		max-width: 98%;
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-rows: 1fr 8px 1fr 8px 1fr 8px 1fr 8px 1fr;
+		-ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr;
+		    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+		gap: 8px;
+		margin-left: 6px;
+		left: 1px;
+	}
+}
